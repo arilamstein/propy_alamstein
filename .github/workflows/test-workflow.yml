@@ -1,9 +1,8 @@
-name: Example
+name: Run automated pytests
 on: [push, pull_request]
 
 jobs:
   uv-example:
-    name: python
     runs-on: ubuntu-latest
     strategy:
       matrix:
