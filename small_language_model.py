@@ -1,6 +1,6 @@
 from collections import defaultdict, Counter
 import random
-from typing import DefaultDict, Counter as TypingCounter
+from typing import DefaultDict, Counter as TypingCounter, List, Tuple
 
 
 class SmallLanguageModel:
@@ -25,7 +25,23 @@ class SmallLanguageModel:
         else:
             chosen_char = None
         return chosen_char
+    
+    def get_character_training_frequency(self) -> List[Tuple[str, int]]:
+        """
+        Returns the number of times each character appears in the training data. 
 
+        Returns a list of tuples. The first character in the tuple is the character. 
+        The second character is the number of times it appears. The list is sorted 
+        in descending order.
+        """
+        # The total frequency of a letter is the sum of all the letters which come after it
+        num_occurences = {}
+        for k, v in self.char_map.items():
+            num_occurences[k] = sum(v.values())
+
+        # Now sort and return the frequency data
+        num_occurences = sorted(num_occurences.items(), key=lambda x: x[1], reverse=True)
+        return num_occurences
 
 # Example usage
 if __name__ == "__main__":
@@ -34,3 +50,4 @@ if __name__ == "__main__":
     print(slm.char_map)
     print(slm.predict_next("l"))
     print(slm.predict_next("l"))
+    print(slm.get_character_training_frequency())
