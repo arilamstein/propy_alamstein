@@ -5,7 +5,7 @@ from typing import DefaultDict, Counter as TypingCounter, List, Tuple
 
 class SmallLanguageModel:
     def __init__(self) -> None:
-        self.char_map: DefaultDict[str, TypingCounter[str, int]] = defaultdict(Counter)
+        self.char_map: DefaultDict[str, TypingCounter[str]] = defaultdict(Counter)
 
     def train(self, text: str) -> None:
         if len(text) < 2:
