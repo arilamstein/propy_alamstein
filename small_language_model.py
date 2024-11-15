@@ -35,13 +35,12 @@ class SmallLanguageModel:
         in descending order.
         """
         # The total frequency of a letter is the sum of all the letters which come after it
-        num_occurences = {}
+        num_occurences: dict[str, int] = {}
         for k, v in self.char_map.items():
             num_occurences[k] = sum(v.values())
 
         # Now sort and return the frequency data
-        num_occurences = sorted(num_occurences.items(), key=lambda x: x[1], reverse=True)
-        return num_occurences
+        return sorted(num_occurences.items(), key=lambda x: x[1], reverse=True)
 
 # Example usage
 if __name__ == "__main__":
