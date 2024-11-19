@@ -17,4 +17,5 @@ dev-dependencies = [
     "mypy>=1.13.0",
     "pyre-check>=0.9.23",
     "pytest>=8.3.3",
+    "ruff>=0.7.4",
 ]
