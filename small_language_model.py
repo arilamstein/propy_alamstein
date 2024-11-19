@@ -25,13 +25,13 @@ class SmallLanguageModel:
         else:
             chosen_char = None
         return chosen_char
-    
+
     def get_character_training_frequency(self) -> List[Tuple[str, int]]:
         """
-        Returns the number of times each character appears in the training data. 
+        Returns the number of times each character appears in the training data.
 
-        Returns a list of tuples. The first character in the tuple is the character. 
-        The second character is the number of times it appears. The list is sorted 
+        Returns a list of tuples. The first character in the tuple is the character.
+        The second character is the number of times it appears. The list is sorted
         in descending order.
         """
         # The total frequency of a letter is the sum of all the letters which come after it
@@ -41,6 +41,7 @@ class SmallLanguageModel:
 
         # Now sort and return the frequency data
         return sorted(num_occurences.items(), key=lambda x: x[1], reverse=True)
+
 
 # Example usage
 if __name__ == "__main__":

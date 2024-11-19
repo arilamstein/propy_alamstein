@@ -19,8 +19,6 @@ def initialized_slm() -> SmallLanguageModel:
 
 
 def test_train(initialized_slm):
-
-
     correct_H = Counter({"e": 1})
     assert initialized_slm.char_map["H"] == correct_H
 
