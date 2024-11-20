@@ -1,7 +1,11 @@
+import sys
+import os
 import pytest
 from collections import Counter
 
-from small_language_model import SmallLanguageModel
+# Presumably there is a better way to do this, but I just don't know it!
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from propy_alamstein.small_language_model import SmallLanguageModel
 
 
 def test_initializes_with_empty_dict() -> None:
