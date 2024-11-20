@@ -1,6 +1,6 @@
 [project]
 name = "propy_alamstein"
-version = "0.1.0"
+version = "0.1.1"
 description = "Final Project for Matt Harrison / MetaSnake's 'Professional Python' Course"
 readme = "README.md"
 requires-python = ">=3.13"
