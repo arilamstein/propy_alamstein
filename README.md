@@ -14,7 +14,7 @@ The core code in this repo is the class `SmallLanguageModel` in the file `small_
 If, despite the above warning, you still want to run the code in this repo, you can do so like this:
 
 ```python
-from small_language_model import SmallLanguageModel
+from propy_alamstein.small_language_model import SmallLanguageModel
 
 slm = SmallLanguageModel()
 slm.train("The quick brown fox jumped over the lazy dogs")

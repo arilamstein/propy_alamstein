@@ -1,7 +1,7 @@
 [project]
-name = "propy"
+name = "propy_alamstein"
 version = "0.1.0"
-description = "Add your description here"
+description = "Final Project for Matt Harrison / MetaSnake's 'Professional Python' Course"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -19,4 +19,5 @@ dev-dependencies = [
     "pyre-check>=0.9.23",
     "pytest>=8.3.3",
     "ruff>=0.7.4",
+    "twine>=5.1.1",
 ]
